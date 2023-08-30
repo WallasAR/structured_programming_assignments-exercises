@@ -4,4 +4,3 @@ name = input("Digite seu primeiro nome: ").strip()
 lastname = input("Digite seu sobrenome: ").strip()
 
 print(name + " " + lastname)
-
