@@ -2,18 +2,19 @@
 
 # Processing
 def conversion(c):
-    # variable "fahren" save the result of equation
+    # Variable "fahren" save the result of equation
     fahren = (c * (9 / 5)) + 32
     return fahren
 
 # main function
 def main():
-    # variable "celcius" receives input and converts to type float
-    celsius = float(input())
-    # variable "result" receives the result of the function "conversion"
+    # Variable "celsius" receives input and converts to type float
+    celsius = float(input("Digite a temperatura em Graus Celsius(ºC): "))
+    # The "result" variable receives a call to the "conversion" function, giving the necessary parameters and receiving the result immediately afterwards
     result = conversion(celsius)
-    # output
-    print(result)
+    # Prints the result of the "result" variable on the screen
+    print(f"A temperatura correspondente em Fahrenheit {result} ºF.")
 
+# Identify function main for execute
 if __name__ == "__main__":
     main()

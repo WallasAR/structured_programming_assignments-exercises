@@ -3,20 +3,21 @@
 
 # Processing function
 def mpond(n1, n2, n3):
-    # variable "calc" save the result of equation
+    # Variable "calc" save the result of equation
     calc = ((n1*2) + (n2*3) + (n3*5)) / 10
     return calc
 
-# main function
+# Main function
 def main():
-    # variables "val1, val2, val3" receives inputs and all are converted to float type
-    val1 = float(input())
-    val2 = float(input())
-    val3 = float(input())
-    # variable "result" receives the result of the function "mpond"
+    # Variables "val1, val2, val3" receives inputs and all are converted to float type
+    val1 = float(input("Digite a primeira nota do(a) aluno(a): "))
+    val2 = float(input("Digite a segunda nota do(a) aluno(a): "))
+    val3 = float(input("Digite a terceira nota do(a) aluno(a): "))
+    # The "result" variable receives a call to the "mpond" function, giving the necessary parameters and receiving the result immediately afterwards
     result = mpond(val1, val2, val3)
-    # output
-    print(result)
+    # Prints the result of the "result" variable on the screen
+    print(f"\n\tA média deste(a) aluno(a) é {result}")
     
+# Identify function main for execute
 if __name__ == "__main__":
     main()

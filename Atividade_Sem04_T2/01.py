@@ -5,80 +5,81 @@
 
 # OBS.: Olá professor! tenho o costume de deixar minha documentação em inglês, espero que não tenha nenhum problema. Motivo: legibilidade para o maior número de pessoas na plataforma do GitHub.
 
-# functions for processing
+# Functions for processing
 #a
 def sumNum(n1, n2):
-    # returns the addition of numbers
+    # Returns the addition of numbers
     return n1 + n2
 #b
 def concatStr(n1, n2):
     # change variables from type float to string
     n1 = str(n1)
-    # the type of variable "n2" is first changed to integer in order to remove the decimal, then it is again changed to type string allowing the proposed concatenation
+    # The type of variable "n2" is first changed to integer in order to remove the decimal, then it is again changed to type string allowing the proposed concatenation
     n2 = int(n2)
     n2 = str(n2)
-    # returns string concatenation
+    # Returns string concatenation
     return n1 + n2
 #c
 def multNum(n1, n2):
-    # returns multiplication of numbers
+    # Returns multiplication of numbers
     return n1 * n2
 #d
 def multStr(n1, n2):
-    # change variables from type float to string and integer respectively.
+    # Change variables from type float to string and integer respectively
     n1 = str(n1)
     n2 = int(n2)
-    # returns multiplication as string
+    # Returns multiplication as string
     return n1 * n2
 #e
 def divisNum(n1, n2):
-    # returns the division of numbers
+    # Returns the division of numbers
     return n1 / n2
 #f
 def divisInt(n1, n2):
-    # returns integer division of numbers
+    # Returns integer division of numbers
     return n1 // n2
 #g
 def expon(n1, n2):
-    # returns the exponentiation.
+    # Returns the exponentiation
     return n1**n2
 #h
 def mod(n1,n2):
-    # returns the module
+    # Returns the module
     return n1 % n2
 
-# function main
+# Function main
 def main():
-    # input
-    var1 = float(input())
-    var2 = float(input())
+     # Variables "var1, var2" receives inputs and all are converted to float type
+    var1 = float(input("Digite o primeiro valor: "))
+    var2 = float(input("Digite o segundo valor: "))
 
-    #output
-    #result = name_func(param) -> variable to receive the result of the functions 
+    # Output
+    # Result = name_func(param) -> variable to receive the result of the functions
     # a
     result = sumNum(var1, var2)
-    print(result)
+    print(f"\nSoma dos números -> {var1} + {var2} = {result}\n")
     # b
     result = concatStr(var1, var2)
-    print(result)
+    print(f"Concatenação das Strings -> {var1} com {var2} = {result}\n")
     # c
     result = multNum(var1, var2)
-    print(result)
+    print(f"Multiplicação dos números -> {var1} x {var2} = {result}\n")
     # d
     result = multStr(var1, var2)
-    print(result)
+    print(f"Multiplicação como Strings -> {var1} x {var2} = {result}\n")
     # e
     result = divisNum(var1, var2)
-    print(result)
+    print(f"Divisão dos números -> {var1} / {var2} = {result}\n")
     # f
     result = divisInt(var1, var2)
-    print(result)
+    print(f"Divisão inteira dos números -> {var1} // {var2} = {result}\n")
     # g
     result = expon(var1, var2)
-    print(result)
+    print(f"A exponenciação -> {var1} ^ {var2} = {result}\n")
     # h
     result = mod(var1, var2)
-    print(result)
+    print(f"O módulo -> {var1} % {var2} = {result}\n")
 
+# Identify function main for execute
 if __name__ == '__main__':
     main()
