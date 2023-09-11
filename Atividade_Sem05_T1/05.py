@@ -4,7 +4,7 @@
 def invert(n):
     # The "numStr" variable receives the iteration of parts in descending form
     numStr = n[3] + n[2] + n[1] + n[0]
-    return numStr
+    return int(numStr)
 
 # Main function
 def main():

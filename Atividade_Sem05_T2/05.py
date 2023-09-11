@@ -2,8 +2,8 @@
 
 def analysis(c):
     isconsonant = bool(c >= "a" and c <= "z" )
-    isNumber = bool(c > "" and c < "")
-    return ((not isconsonant) or not isNumber)
+    isNumber = bool((not c >= "0") or (not c < "0"))
+    return not isconsonant and isNumber
 
 def main():
     char = str(input())
