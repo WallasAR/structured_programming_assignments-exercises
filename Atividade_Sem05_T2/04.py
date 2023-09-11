@@ -1,17 +1,22 @@
 # 04. Escreva um programa que leia um caractere e mostra o valor booleano True (verdadeiro) se for uma LETRA (vogal ou consoante) ou um NÚMERO (entre ‘0’ e ‘9’) ou valor booleano False (falso) caso contrário.
 
+# Processing function
 def analysis(c):
-    isconsonant = bool(c >= "a" and c <= "z" )
-    # isNumber = bool(c >= "0" and c <= "9") why not working?
-    isNumber = bool((c == "0") or (c == "1") or (c == "2") or (c == "3") or (c == "4") or (c == "5") or (c == "6") or (c == "7") or (c == "8") or (c == "9"))
-    return isconsonant or isNumber
+    # Variables "letter, number" receive strings of characters, respectively, of letters and numbers
+    letter = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+    number = "0123456789"
+    # The variable “c” will be compared with the elements of the “letter and number” vectors, if any element matches the input the result will be True, otherwise it will be False.
+    return c in letter or c in number
 
+# Main function
 def main():
-    char = str(input())
-    
+    # The "char" variable receives input and is converted to string type
+    char = str(input("Informe qualquer valor: ")).strip()
+    # The variable "result" receives the function call "analysis", sending the necessary parameter and receiving the result immediately afterwards
     result = analysis(char)
+    # Prints the result of the "result" variable on the screen
+    print(f"O valor digitado é uma letra(vogal ou consoante) ou um númeral(entre 0 e 9)?\nResposta: {result}")
 
-    print(result)
-
+# Identify function main for execute
 if __name__ == "__main__":
     main()
