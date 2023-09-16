@@ -9,7 +9,7 @@ def charNum(char):
 def main():
     # The "varChar" variable receives input
     varChar = str(input("Digite um nome: ")).strip()
-    # The variable "result" receives the function call "analysis", sending the necessary parameter and receiving the result
+    # The variable "result" receives the function call "charNum", sending the necessary parameter and receiving the result
     result = charNum(varChar)
     # Prints the result of the "result" variable on the screen
     print(f"A quantidade de caracteres (sem contar os espaços em branco do inÍcio ou final da frase) do nome são de {result} letras.")
