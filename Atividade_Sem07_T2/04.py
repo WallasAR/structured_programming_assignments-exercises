@@ -18,7 +18,7 @@ def sign(month, day):
     elif ((month == 10 and day >= 23) or (month == 11 and day <= 21)):
         return "Escorpião"
     elif ((month == 11 and day >= 22) or (month == 12 and day <= 21)):
-        return "Sargitário"
+        return "Sagitário"
     elif ((month == 12 and day >= 22) or (month == 1 and day <= 19)):
         return "Capricórnio"
     elif ((month == 1 and day >= 20) or (month == 2 and day <= 18)):

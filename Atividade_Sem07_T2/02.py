@@ -2,6 +2,7 @@
 
 def analysis(intNum):
     if 100 <= intNum <= 999:
+        
         c = intNum // 100
         d = (intNum % 100) // 10
         u = intNum % 10
