@@ -1,8 +1,7 @@
 # Desafio: Como eu fiz?
 # Desafio completo
 
-# Desafio: Mantendo a pontuação
-
+# Function to check the correctness of "Q1"
 def Q1(resp, point):
     if resp == "a":
         print("Incorreto!!")
@@ -17,7 +16,7 @@ def Q1(resp, point):
     else:
         print("Opção inválida!!")
         return point
-
+# Function to check the correctness of "Q2"
 def Q2(resp, point):
     if resp == "a":
         print("Correto!!\t+1 ponto")
@@ -32,7 +31,7 @@ def Q2(resp, point):
     else:
         print("Opção inválida!!")
         return point
-
+# Function to check the correctness of "Q3"
 def Q3(resp, point):
     if resp == "a":
         print("Incorreto!!")
@@ -47,7 +46,7 @@ def Q3(resp, point):
     else:
         print("Opção inválida!!")
         return point
-
+# Function to check the correctness of "Q4"
 def Q4(resp, point):
     if resp == "a":
         print("Incorreto!!")
@@ -62,7 +61,7 @@ def Q4(resp, point):
     else:
         print("Opção inválida!!")
         return point
-
+# Function to check the correctness of "Q5"
 def Q5(resp, point):
     if resp == "a":
         print("Incorreto!!")
@@ -79,6 +78,7 @@ def Q5(resp, point):
         return point
 
 def main():
+    # Variable that records the number of correct answers
     point = 0
     print(''' 
     Q1 -  Qual destes dispositivos é usado principalmente para armazenar informações em forma digital?
@@ -86,7 +86,9 @@ def main():
     b - CD (Compact Disc)
     c - Papel impresso
     ''')
+    # Variable "resposta" receives an input and then all its characters are changed to lowercase
     resposta = input().lower()
+    # The function returns the point, or not, to the "score" variable and then this point is passed to another "point" variable in order to preserve it as the "score" variable is always changed when calling the functions
     score = Q1(resposta, point)
 
     point = score
@@ -136,6 +138,7 @@ def main():
     point = score
     
     print(f"O jogo acabou! Sua pontuação:\n\t>> {score} acertos de 5 questões")
+    # Conditional for a more informative output for each situation
     if score == 5:
         print("\tMUITO BEM! Você acertou todas!!")
     else:
