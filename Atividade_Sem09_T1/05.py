@@ -5,9 +5,11 @@
 # • Se 3 (três), escreva a divisão inteira do valor lido por 10;
 # • Se 4 (quatro), escreva o quadrado do valor lido;
 
+# Creation of the function "choice" for data processing
 def choice(numInt):
+    # Variable "" receives mathematical operation
     calc = numInt % 5
-
+    # Multiple choice structure that checks the corresponding operation according to the Boolean result of the variable "calc"
     if (calc == 0):
         return 9*numInt + 7
     
@@ -26,12 +28,15 @@ def choice(numInt):
     else:
         return numInt**2
 
+# Creating the main function
 def main():
-    num = int(input())
-
+    # Variable "num" receives an input and is then converted to the integer type
+    num = int(input("Digite um número inteiro qualquer: "))
+    # The variable "result" receives the call to the "choice" function
     result = choice(num)
+    # Prints the value of the variable "result" on the screen
+    print(f"A operação correspondente retornou o seguinte resultando: {result}")
 
-    print(f"{result}")
-
+# Identify function main for execute
 if __name__ == "__main__":
     main()
