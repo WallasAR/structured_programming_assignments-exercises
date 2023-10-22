@@ -19,7 +19,7 @@ def numDef():
 def main():
     # Variables "P" and "I" receive, respectively, the return of the "numDef" function (return countP, countI)
     P, I = numDef()
-    # shows the value of the variables P and I
+    # Shows the value of the variables P and I
     print(f"{P}\n{I}")
 # Identify function main for execute
 if __name__ == "__main__":
