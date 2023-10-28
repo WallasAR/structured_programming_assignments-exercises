@@ -30,13 +30,13 @@ def bank(initdep, tax):
 # Creating the main function
 def main():
     # Variable "initDeposit" receives an input and is then converted to the float type
-    initDeposit = float(input())
+    initDeposit = float(input("Digite o depósito inicial: R$ "))
     # Variable "tax" receives an input and is then converted to the float type
-    tax = float(input())
+    tax = float(input("Qual a taxa de juros a.a da poupança? |> "))
     # The variable "result" receives the call to the "bank" function
     result = bank(initDeposit, tax)
     # Prints the value of the variable "result" on the screen
-    print(f"{result}")
+    print(f"O capital inicial será dobrado em {result} anos")
 # Identify function main for execute
 if __name__ == "__main__":
     main()

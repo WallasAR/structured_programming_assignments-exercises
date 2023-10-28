@@ -21,10 +21,11 @@ def invert(num):
 # Creating the main function
 def main():
     # Variable "num" receives input, then converted to integer type
-    num = int(input())
+    num = int(input("Informe um numero inteiro qualquer: "))
     # The variable "invertNum" receives the call to the "invert" function
     invertNum = invert(num)
     # Prints the value of the variable "invertNum" on the screen
-    print(f"{invertNum}")
+    print(f"A forma inversa desse número é {invertNum}")
+# Identify function main for execute
 if __name__ == "__main__":
     main()

@@ -8,11 +8,12 @@
 # Por exemplo: Considerando que o salário inicial é de R$ 2.000,00 e o valor da dívida é R$ 100,00 o valor
 # da dívida irá superar o salário em setembro de 2018 (9/2018)
  
-# Creation of the function "" for data processing
+# Creation of the function "subseqDebit" for data processing
 def subseqDebit(salar, deb):
     # Variables "month" and "year" are initialized, respectively, with values ​​10 and 2016
     month = 10
     year = 2016
+    # Repetition structure that executes as long as the condition is met
     
     while (deb <= salar):
 
@@ -31,11 +32,12 @@ def subseqDebit(salar, deb):
 # Creating the main function
 def main():
     # Variables "salary" and "debt" receive inputs, then are converted to float type
-    salary = float(input())
-    debt = float(input())
+    salary = float(input("Informe quanto o funcionário Pedro ganha: R$ "))
+    debt = float(input("Quanto o Pedro está devendo no momento? | R$ "))
     # Variables "month" and "year" receive the function call "subseqDebit"
     month, year = subseqDebit(salary, debt)
     # Shows the values ​​of the variables "month" and "year" on the screen
-    print(f"{month}/{year}")
+    print(f"Contando que essa dívida teve início em 10/2016, Em {month}/{year} a dívida de Pedro ultrapassará seu próprio salário! Pague suas contas Pedro!!")
+# Identify function main for execute
 if __name__ == "__main__":
     main()

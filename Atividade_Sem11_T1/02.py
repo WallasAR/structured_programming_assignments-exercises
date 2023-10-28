@@ -10,7 +10,7 @@ def average():
     # Repetition structure that runs indefinitely
     while True:
         # Variable "num" receives input, then converted to integer type
-        num = int(input())
+        num = int(input("Digite um numero inteiro qualquer (digite 0 para o resultado): "))
         # Conditional structure that checks the given input, if it is 0 the loop will terminate, if it is a number greater than 0 operations will be performed
         if (num == 0):
             break
@@ -26,6 +26,6 @@ def main():
     # The variable "result" receives the call to the "average" function    
     result = average()
     # Prints the value of the "result" variable on the screen, duly treated with two decimal places
-    print(f"{result:.2f}")
+    print(f"A média aritmética de todos os números lidos é igual a {result:.2f}.")
 if __name__ == "__main__":
     main()
