@@ -7,7 +7,7 @@ def average():
     # Initialization of variable "sampleSpace" with value 0
     sampleSpace = 0
 
-    # Repeating structure that runs indefinitely
+    # Repetition structure that runs indefinitely
     while True:
         # Variable "num" receives input, then converted to integer type
         num = int(input())

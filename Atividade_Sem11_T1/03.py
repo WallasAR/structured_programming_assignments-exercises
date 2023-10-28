@@ -7,7 +7,7 @@ def biggSmall():
     # Variables "biggerNum" and "smallerNum" both receive the value of the variable "num"
     biggerNum = num
     smallerNum = num
-    # Repeating structure that runs indefinitely
+    # Repetition structure that runs indefinitely
     while True:
         # Variable "num" receives input, then converted to integer type
         num = int(input())

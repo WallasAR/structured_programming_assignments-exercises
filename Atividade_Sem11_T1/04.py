@@ -18,6 +18,7 @@ def invert(num):
         num //= 10
     # Returns the value of the variable "invertNum"
     return invertNum
+# Creating the main function
 def main():
     # Variable "num" receives input, then converted to integer type
     num = int(input())
