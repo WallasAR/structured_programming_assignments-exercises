@@ -13,7 +13,7 @@ def celsiusToKelvin(tempCelsius):
 
 # Function to convert Fahrenheit to Kelvin
 def fahrenheitToKelvin(tempFahrenheit):
-    return (tempFahrenheit - 32) * (5/9) + 273.15
+    return round((tempFahrenheit - 32) * (5/9) + 273.15, 2)
 
 # Function to input temperature and its unit
 def inputTemperature():
