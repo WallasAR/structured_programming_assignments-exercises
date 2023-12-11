@@ -7,35 +7,38 @@
 # 'Carlos': [74.5, 79.1, 73.2, 76.6, 73.5]
 # }
 
-from operator import itemgetter
+from operator import itemgetter  # Importing itemgetter from the operator module
 
+# Function to register lap times for five runners
 def registerTimes():
-    runners_times = {}
+    runners_times = {}  # Initialize an empty dictionary to store runner names and their lap times
 
     for _ in range(5):  # For each of the 5 runners
-        runner_name = input().strip()
+        runner_name = input("Nome do corredor: ").strip()  # Input the name of the runner
         times = []
 
-        for lap in range(5):  # 5 laps for each runner
-            time = float(input())
-            times.append(time)
+        for lap in range(5):  # Input lap times for each runner
+            time = float(input("Tempo da volta (em segundos): "))  # Input the lap time for a specific lap
+            times.append(time)  # Add the lap time to the list of times for the current runner
 
-        runners_times[runner_name] = times
+        runners_times[runner_name] = times  # Store the list of lap times for the runner
 
-    return runners_times
+    return runners_times  # Return the dictionary containing all runner names and their lap times
 
+# Function to calculate rankings based on lap times
 def calculate_ranking(runners_times):
-    ranking = []
+    ranking = []  # Initialize an empty list to store rankings
 
+    # Calculate statistics for each runner and add them to the ranking list
     for runner, times in runners_times.items():
-        total_time = round(sum(times), 1)
-        average_time = round(sum(times) / len(times), 1)
-        best_lap = round(min(times), 1)
-        ranking.append((runner, total_time, average_time, best_lap))
+        total_time = round(sum(times), 1)  # Calculate total time for all laps of a runner
+        average_time = round(sum(times) / len(times), 1)  # Calculate average time per lap for a runner
+        best_lap = round(min(times), 1)  # Find the best (minimum) lap time for a runner
+        ranking.append((runner, total_time, average_time, best_lap))  # Add runner statistics to the ranking list
 
-    ranking.sort(key=itemgetter(1))  # Sort by total time
+    ranking.sort(key=itemgetter(1))  # Sort the ranking list by total time using itemgetter
 
-    return ranking
+    return ranking  # Return the sorted ranking list
 
 def show_ranking(ranking):
     print("-------|------------------|-------------|-------------|--------------")
@@ -47,6 +50,7 @@ def show_ranking(ranking):
 
     print("-------|------------------|-------------|-------------|--------------")
 
+# Main function
 def main():
     # Register runners' times
     runners_times = registerTimes()
@@ -55,5 +59,6 @@ def main():
     ranking = calculate_ranking(runners_times)
     show_ranking(ranking)
 
+# Execute the main function if this script is executed directly
 if __name__ == "__main__":
     main()
