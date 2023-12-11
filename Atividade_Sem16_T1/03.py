@@ -7,10 +7,10 @@ def inputContacts(size):
 
     # Loop to input contact details until the agenda reaches the given size
     for _ in range(size):
-        name = input().strip()
-        city = input().strip()
-        state = input().strip()
-        phone = input().strip()
+        name = input("Nome: ").strip()
+        city = input("Cidade: ").strip()
+        state = input("Estado: ").strip()
+        phone = input("Telefone: ").strip()
 
         # Store contact details in the dictionary with the code as the key
         agenda[code] = {
@@ -26,6 +26,7 @@ def inputContacts(size):
 
 # Function to print all contacts in the specified format
 def printContacts(agenda):
+    print("-------------- Agenda ---------------------")
     for code, contact in agenda.items():
         # Extracting contact details
         name = contact["Nome"].ljust(25)
@@ -38,7 +39,8 @@ def printContacts(agenda):
 
 # Main function
 def main():
-    size = int(input())
+    size = int(input("Digite o tamanho da agenda: "))
+    
     contact_agenda = inputContacts(size)  # Get contact details from user input
 
     printContacts(contact_agenda)  # Print all contacts in the specified format

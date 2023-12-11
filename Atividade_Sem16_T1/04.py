@@ -6,9 +6,9 @@ def registerPeople():
     minors = {}  # Dictionary to store people under 18 years old
 
     for i in range(20):
-        name = input().strip()
-        age = int(input())
-        cpf = input().strip()
+        name = input("Digite o nome: ").strip()
+        age = int(input("Insira a idade: "))
+        cpf = input("Digite o CPF: ").strip()
 
         # Stores the information in the dictionary using CPF as the key
         people[cpf] = {'Name': name, 'Age': age, 'CPF': cpf}
